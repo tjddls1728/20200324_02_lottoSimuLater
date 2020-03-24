@@ -21,6 +21,7 @@ public class MainActivity extends baseActivity {
     List<TextView> winNumTxtList = new ArrayList<>();
     int[] winLottoNumArr = new int[6];
     int bonusNum = 0;
+    int[] myLottoNumArr = {1,12,17,25,30,39};
 
     long useMoneyAmount = 0;
 
@@ -154,6 +155,37 @@ public class MainActivity extends baseActivity {
     useMoneyAmount += 1000;
 
     binding.useMoneyTxt.setText(String.format("사용금액 : %d원",useMoneyAmount));
+
+//    몇등인지?
+//        내 번호를 하나 들고 => 당첨 번호 6개를 돌아볼것임.
+//        얻어낼것? 몇개의 숫자를 맞췄는지.
+        int correctCount = 0;
+
+        for (int myNum : myLottoNumArr){
+            for (int winNum : winLottoNumArr){
+                if (myNum == winNum){
+                    correctCount++;
+                }
+            }
+        }
+
+//        correctCount의 값에 따라 등수를 판정.
+        if (correctCount ==6 ){
+//            1등
+            Log
+        }
+        else if (correctCount ==5){
+//            2등 / 3등 재검사 요구 => 보너스 번호 맞췄는지?
+        }
+        else if (correctCount ==4){
+
+        }
+        else if (correctCount==3){
+
+        }
+        else {
+//            끝
+        }
 
     }
 
