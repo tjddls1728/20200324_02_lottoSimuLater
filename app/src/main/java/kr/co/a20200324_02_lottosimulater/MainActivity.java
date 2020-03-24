@@ -7,13 +7,18 @@ import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.logging.Level;
 
 import kr.co.a20200324_02_lottosimulater.databinding.ActivityMainBinding;
 
 public class MainActivity extends baseActivity {
 
+    List<TextView> winNumTxtList = new ArrayList<>();
     int[] winLottoNumArr = new int[6];
     int bonusNum = 0;
 
@@ -45,6 +50,13 @@ public class MainActivity extends baseActivity {
 
     @Override
     public void setupValues() {
+
+        winNumTxtList.add(binding.winLottoNumTxt01);
+        winNumTxtList.add(binding.winLottoNumTxt02);
+        winNumTxtList.add(binding.winLottoNumTxt03);
+        winNumTxtList.add(binding.winLottoNumTxt04);
+        winNumTxtList.add(binding.winLottoNumTxt05);
+        winNumTxtList.add(binding.winLottoNumTxt06);
 
 
 
@@ -100,6 +112,15 @@ public class MainActivity extends baseActivity {
 
             }
 
+        }
+
+//        6개의 당첨번호를 작은 숫자부터 정렬.
+        Arrays.sort(winLottoNumArr);
+
+        for (int i=0 ; i<winLottoNumArr.length ; i++) {
+
+
+            winNumTxtList.get(i).setText(winLottoNumArr[i]+"");
         }
 
 
