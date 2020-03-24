@@ -123,6 +123,27 @@ public class MainActivity extends baseActivity {
             winNumTxtList.get(i).setText(winLottoNumArr[i]+"");
         }
 
+//        보너스번호 생성 => 1~45, 당첨번호 중복 X.
+
+        while (true){
+            int randomNum = (int) (Math.random()*45+1);
+
+            boolean isDup1Ok = true;
+            for (int winNum : winLottoNumArr){
+                if (winNum == randomNum){
+                    isDup1Ok = false;
+                    break;
+                }
+            }
+            if (isDup1Ok){
+                bonusNum = randomNum;
+                break;
+            }
+
+        }
+
+//        보너스넘버 생성됨.
+        binding.bonusNumTxt.setText(bonusNum+"");
 
     }
 }
