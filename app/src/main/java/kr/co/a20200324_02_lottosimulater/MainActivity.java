@@ -177,6 +177,27 @@ public class MainActivity extends baseActivity {
         }
         else if (correctCount ==5){
 //            2등 / 3등 재검사 요구 => 보너스 번호 맞췄는지?
+//            =>내 번호중에 보너스 번호와 같은게 있나?
+
+            boolean hasBonusNum = false;
+
+            for (int myNum : myLottoNumArr){
+                if (myNum == bonusNum){
+                    hasBonusNum = true;
+                    break;
+                }
+
+            }
+
+            if (hasBonusNum){
+//                2등
+                winMoneyAmount += 75000000;
+            }
+            else {
+//                3등
+                winMoneyAmount += 1500000;
+            }
+
         }
         else if (correctCount ==4){
 //            4등
