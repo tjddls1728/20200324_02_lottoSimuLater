@@ -151,6 +151,12 @@
         android:layout_height="wrap_content"
         android:text="로또 한장 구매하기"/>
 
+    <Button
+        android:id="@+id/buyAutoLottoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="자동 로또 구매하기"/>
+
     <TextView
         android:id="@+id/useMoneyTxt"
         android:layout_marginTop="15dp"
@@ -184,7 +190,7 @@
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:id="@+id/thordRankCountTxt"
+        android:id="@+id/thirdRankCountTxt"
         android:layout_marginTop="15dp"
         android:textSize="16sp"
         android:text="3등 : 0회"
@@ -192,7 +198,7 @@
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:id="@+id/fourRankCountTxt"
+        android:id="@+id/fourhRankCountTxt"
         android:layout_marginTop="15dp"
         android:textSize="16sp"
         android:text="4등 : 0회"
@@ -200,7 +206,7 @@
         android:layout_height="wrap_content"/>
 
     <TextView
-        android:id="@+id/fifhtRankCountTxt"
+        android:id="@+id/fifthRankCountTxt"
         android:layout_marginTop="15dp"
         android:textSize="16sp"
         android:text="5등 : 0회"
@@ -210,7 +216,7 @@
         android:id="@+id/noRankCountTxt"
         android:layout_marginTop="15dp"
         android:textSize="16sp"
-        android:text="낙첨 : 0회"ㄷ
+        android:text="낙첨 : 0회"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
